@@ -1,7 +1,6 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
-<br />
 
 <div class="main-slideshow-panel">
     <div class="slideshow">
@@ -53,13 +52,14 @@
     <div class="flash-deals-panel">
         @for (int i = 0; i < 15; i++)
         {
-            <div class="product-panel">
-                <img src="~/Images/14663.jpg" alt="14663.jpg" style="width: 100%"/>
-            </div>
+        <div class="product-panel" onclick="window.location.href = 'Home/ProductPage'">
+            <img src="~/Images/14663.jpg" alt="14663.jpg" class="product-preview" />
+            <div class="info-text">19,99лв</div>
+        </div>
         }
     </div>
 </div>
-@*
+
     0<br />
     1<br />
     2<br />
@@ -229,4 +229,4 @@
     6<br />
     7<br />
     8<br />
-    9<br />*@
+    9<br />

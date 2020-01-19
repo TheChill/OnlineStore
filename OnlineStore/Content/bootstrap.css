@@ -1564,7 +1564,7 @@ pre code {
   margin-right: auto;
   margin-left: auto;
 }
-@media (min-width: 768px) {
+/*@media (min-width: 768px) {
   .container {
     width: 750px;
   }
@@ -1587,7 +1587,7 @@ pre code {
   .main-sticky-navbar {
       width: 1170px;
   }
-}
+}*/
 .container-fluid {
   padding-right: 15px;
   padding-left: 15px;
@@ -7108,14 +7108,9 @@ body {
 }
 
 .main-slideshow-panel .slideshow {
-    /*width: 100%;*/
-    /*background-color: black;*/
     margin: 10px auto 10px auto;
-    /*padding: 10px 0 10px 0;*/
     max-width: 1920px;
     position: relative;
-    /*height: auto;*/
-
 }
 
 .main-slideshow-panel .slideshow .slideshow-prev-button {
@@ -7240,9 +7235,11 @@ body {
 
 .front-page .separator-label {
     width:100%;
-    background-color:rgba(0, 0, 0, 0.8);
+    background-color:rgba(255, 0, 0, 1);
     color: white;
-    padding-left:10%;
+    padding: 0 0 0 10%;
+    /*padding-left:10%;*/
+    margin: 0;
     font-size: 17px;
 }
 
@@ -7250,13 +7247,16 @@ body {
     /*display: flex;*/
     /*flex-direction: row;*/
     width: 100%;
-    max-height: 230px;
+    min-height: 100%;
+    height: auto;
     overflow: auto;
     white-space: nowrap;
+    /*border: solid black;
+    border-width: 0 3px 0 3px;*/
 }
 
 .front-page .flash-deals-panel::-webkit-scrollbar {
-    width: 10px;
+    /*display: none;*/
 }
 
 .front-page .flash-deals-panel .product-panel {
@@ -7264,8 +7264,177 @@ body {
     padding: 0;
     margin: 0;
     display: inline-block;
-    width: 20%;
+    position: relative;
+    width: 15%;
     max-height: 200px;
     border: solid black;
-    border-width: 1px;
+    border-width: 0 1px 1px 1px;
+    cursor: pointer;
 }
+
+.front-page .flash-deals-panel .product-panel .info-text {
+    position: relative;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    /*width: 100%;*/
+    width: 100%;
+    border: none;
+    border-radius: 0;
+    font-size: 12px;
+    padding-left: 5px; 
+}
+
+@media (min-width: 768px) {
+    .front-page .flash-deals-panel .product-panel .info-text {
+        width: 50%;
+        border-radius: 0 10px 0 0;
+        font-size: 12px;
+    }
+}
+
+@media (min-width: 992px) {
+    .front-page .flash-deals-panel .product-panel .info-text {
+        width: 50%;
+        border-radius: 0 10px 0 0;
+        font-size: 14px;
+    }
+}
+
+.front-page .flash-deals-panel .product-panel .product-preview {
+    width: 100%;
+}
+
+/*==  Product Page  =======================================================*/
+
+.main-product-panel {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+@media (min-width: 768px) {
+    .main-product-panel {
+        flex-direction: row;
+        margin: 30px auto 0 auto;
+    }
+    .main-product-panel .image-panel {
+        width: 30%;
+    }
+    .main-product-panel .product-info-panel {
+        width: 40%;
+        padding: 0 5px 0 5px;
+    }
+    .main-product-panel .user-payment-panel {
+        width: 30%;
+        margin-top: 30px;
+    }
+}
+
+.main-product-panel .image-panel {
+    width: 100%;
+}
+
+.main-product-panel .image-panel .main-image {
+    width: 100%;
+}
+
+.main-product-panel .product-info-panel {
+    width: 100%;
+}
+
+.main-product-panel .product-info-panel .category-label {
+    color: red;
+}
+
+.main-product-panel .product-info-panel .brand-redirect {
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: bold;
+    color: black;
+}
+
+.main-product-panel .product-info-panel .brand-redirect:hover {
+    text-decoration: underline;
+}
+
+.main-product-panel .user-payment-panel {
+    width: 100%;
+}
+
+.main-product-panel .user-payment-panel .product-current-price {
+    color: red;
+    font-size: 30px;
+}
+
+.main-product-panel .user-payment-panel .add-to-cart-panel {
+    border: solid #ccc 1px;
+    background-color: #eee;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px 2% 10px 2%
+}
+
+.main-product-panel .user-payment-panel .add-to-cart-panel .category-label {
+    display: block;
+    width: 100%;
+    height: 22px;
+    background-color: #555;
+    color: white;
+    margin: 0;
+    padding: 0 0 0 10px;
+}
+
+.main-product-panel .user-payment-panel .add-to-cart-panel .dropdown-select {
+    border: solid #555;
+    border-width: 0 1px 1px 1px;
+    height: 25px;
+    min-width: 100%;
+    margin-bottom: 5px;
+}
+
+.main-product-panel .user-payment-panel .add-to-cart-panel .quantity-panel {
+    position: relative;
+}
+
+.main-product-panel .user-payment-panel .add-to-cart-panel .quantity-panel .quantity-input {
+    min-width: 100%;
+    height: 25px;
+    border: solid #555;
+    border-width: 0 1px 1px 1px;
+    padding-left: 3px;
+}
+
+.main-product-panel .user-payment-panel .add-to-cart-panel .final-price-panel {
+    margin: 10px 0 0 0;
+    padding: 0 0 0 1%;
+}
+
+.main-product-panel .user-payment-panel .add-to-cart-panel .final-price-panel .final-price-label {
+    margin: 5px 0 0 0;
+}
+
+.main-product-panel .user-payment-panel .add-to-cart-panel .final-price-panel .final-price {
+    font-size: 20px;
+    color: red;
+    font-weight: 200;
+}
+
+.main-product-panel .user-payment-panel .add-to-cart-panel .add-to-cart-button {
+    min-width: 90%;
+    height: 40px;
+    margin: 20px 5% 0 5%;
+    border: solid #800;
+    border-width: 1px 3px 1px 3px;
+    background-color: red;
+    font-weight: bold;
+    color: white;
+    border-radius: 20px 20px 20px 20px;
+}
+
+.main-product-panel .user-payment-panel .add-to-cart-panel .add-to-cart-button:hover {
+    border-color: black;
+    background-color: rgba(255, 150, 150, 1);
+    color: black;
+}
+

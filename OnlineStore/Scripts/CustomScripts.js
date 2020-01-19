@@ -180,4 +180,11 @@
         plusSlides(-1);
         clearInterval(automaticSlideshowRotation);
     });
+
+    $('#product-page-quantity').blur(function () {
+        alert('asd');
+        $('#product-page-final-price').html = 'works!';
+    });
+
+    alert('asd');
 });

@@ -31,5 +31,23 @@ namespace OnlineStore.Controllers
         {
             return View();
         }
+
+        [HttpGet]
+        public ActionResult ProductPage()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult ShoppingCart(FormCollection collection)
+        {
+            return View();
+        }
+
+        [HttpGet]
+        public ActionResult ShoppingCart()
+        {
+            return View();
+        }
     }
 }

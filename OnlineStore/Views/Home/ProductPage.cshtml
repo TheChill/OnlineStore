@@ -1,0 +1,55 @@
+﻿
+@{
+    ViewBag.Title = "ProductPage";
+}
+
+<div class="main-product-panel">
+    <div class="image-panel">
+        <img src="~/Images/14663.jpg" alt="14663.jpg" class="main-image" />
+    </div>
+    <div class="product-info-panel">
+        <h2>Product Name Placeholder Product Name Placeholder</h2>
+        <br />
+        <b class="category-label">Марка:</b> <a class="brand-redirect">Brand Placeholder</a> <br />
+        <b class="category-label">Размери:</b> 37 (23,5см), 38 (24,5см), 39 (25см), 40 (25,5см), 41 (26см)
+        <hr />
+        <b class="category-label">Описание:</b> <br />
+        <p>Product description placeholder product description placeholder product description placeholder product description placeholder product description placeholder product description placeholder</p>
+    </div>
+    <div class="user-payment-panel">
+        <span class="product-current-price">19,99 лв.</span>
+        @using (Html.BeginForm("ShoppingCart", "Home", FormMethod.Post))
+        {
+            <div class="add-to-cart-panel">
+                <label class="category-label">цвят:</label>
+                <select class="dropdown-select">
+                    <option>тъмно-син</option>
+                    <option>черен</option>
+                    <option>бял</option>
+                    <option>бежов</option>
+                </select> <br />
+
+                <label class="category-label">размер:</label>
+                <select class="dropdown-select">
+                    <option>37 (23,5см)</option>
+                    <option>38 (24,5см)</option>
+                    <option>39 (25см)</option>
+                    <option>40 (25,5см)</option>
+                    <option>41 (26см)</option>
+                </select> <br />
+
+                <div class="quantity-panel">
+                    <label class="category-label">количество:</label>
+                    <input type="number" min="1" max="99" value="1" class="quantity-input" id="product-page-quantity"/>
+                </div>
+
+                <div class="final-price-panel">
+                    <span class="final-price-label">общо:</span>
+                    <span class="final-price" id="product-page-final-price">19,99</span>
+                </div>
+
+                <input type="submit" value="Добави в количката" class="add-to-cart-button" />
+            </div>
+        }
+    </div>
+</div>
