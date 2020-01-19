@@ -1,0 +1,232 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<br />
+
+<div class="main-slideshow-panel">
+    <div class="slideshow">
+
+        <div class="slideshow-slide slideshow-first-slide" id="slideshow-slide-0">
+            <div class="slideshow-number">1 / 4</div>
+            <img src="~/Images/WinterOffer.png" alt="WinterOfferSlide" class="slideshow-image" />
+        </div>
+
+        <div class="slideshow-slide" id="slideshow-slide-1">
+            <div class="slideshow-number">2 / 4</div>
+            <img src="~/Images/SpringOffer.png" alt="SpringOfferSlide" class="slideshow-image" />
+        </div>
+
+        <div class="slideshow-slide" id="slideshow-slide-2">
+            <div class="slideshow-number">3 / 4</div>
+            <img src="~/Images/SummerOffer.png" alt="SummerOfferSlide" class="slideshow-image" />
+        </div>
+
+        <div class="slideshow-slide" id="slideshow-slide-3">
+            <div class="slideshow-number">4 / 4</div>
+            <img src="~/Images/FallOffer.png" alt="FallOfferSlide" class="slideshow-image" />
+        </div>
+
+        <a class="slideshow-prev-button" id="slideshow-prev-button">&#10094;</a>
+        <a class="slideshow-next-button" id="slideshow-next-button">&#10095;</a>
+    </div>
+    <div class="slideshow-dots">
+        <span class="dot" id="slide-dot-1"></span>
+        <span class="dot" id="slide-dot-2"></span>
+        <span class="dot" id="slide-dot-3"></span>
+        <span class="dot" id="slide-dot-4"></span>
+    </div>
+    <div class="offer-panels">
+        <div class="offer-panel">
+            <img src="~/Images/RandomImage1.png" alt="OfferImageLeft" class="offer-image" />
+        </div>
+        <div class="offer-panel">
+            <img src="~/Images/RandomImage2.png" alt="OfferImageMiddle" class="offer-image" />
+        </div>
+        <div class="offer-panel">
+            <img src="~/Images/RandomImage3.png" alt="OfferImageRight" class="offer-image" />
+        </div>
+    </div>
+</div>
+<hr />
+<div class="front-page">
+    <label class="separator-label">Kids</label>
+    <div class="flash-deals-panel">
+        @for (int i = 0; i < 15; i++)
+        {
+            <div class="product-panel">
+                <img src="~/Images/14663.jpg" alt="14663.jpg" style="width: 100%"/>
+            </div>
+        }
+    </div>
+</div>
+@*
+    0<br />
+    1<br />
+    2<br />
+    3<br />
+    4<br />
+    5<br />
+    6<br />
+    7<br />
+    8<br />
+    9<br />
+    0<br />
+    1<br />
+    2<br />
+    3<br />
+    4<br />
+    5<br />
+    6<br />
+    7<br />
+    8<br />
+    9<br />
+    0<br />
+    1<br />
+    2<br />
+    3<br />
+    4<br />
+    5<br />
+    6<br />
+    7<br />
+    8<br />
+    9<br />
+    0<br />
+    1<br />
+    2<br />
+    3<br />
+    4<br />
+    5<br />
+    6<br />
+    7<br />
+    8<br />
+    9<br />
+    0<br />
+    1<br />
+    2<br />
+    3<br />
+    4<br />
+    5<br />
+    6<br />
+    7<br />
+    8<br />
+    9<br />
+    0<br />
+    1<br />
+    2<br />
+    3<br />
+    4<br />
+    5<br />
+    6<br />
+    7<br />
+    8<br />
+    9<br />
+    0<br />
+    1<br />
+    2<br />
+    3<br />
+    4<br />
+    5<br />
+    6<br />
+    7<br />
+    8<br />
+    9<br />
+    0<br />
+    1<br />
+    2<br />
+    3<br />
+    4<br />
+    5<br />
+    6<br />
+    7<br />
+    8<br />
+    9<br />
+    0<br />
+    1<br />
+    2<br />
+    3<br />
+    4<br />
+    5<br />
+    6<br />
+    7<br />
+    8<br />
+    9<br />
+    0<br />
+    1<br />
+    2<br />
+    3<br />
+    4<br />
+    5<br />
+    6<br />
+    7<br />
+    8<br />
+    9<br />
+    0<br />
+    1<br />
+    2<br />
+    3<br />
+    4<br />
+    5<br />
+    6<br />
+    7<br />
+    8<br />
+    9<br />
+    0<br />
+    1<br />
+    2<br />
+    3<br />
+    4<br />
+    5<br />
+    6<br />
+    7<br />
+    8<br />
+    9<br />
+    0<br />
+    1<br />
+    2<br />
+    3<br />
+    4<br />
+    5<br />
+    6<br />
+    7<br />
+    8<br />
+    9<br />
+    0<br />
+    1<br />
+    2<br />
+    3<br />
+    4<br />
+    5<br />
+    6<br />
+    7<br />
+    8<br />
+    9<br />
+    0<br />
+    1<br />
+    2<br />
+    3<br />
+    4<br />
+    5<br />
+    6<br />
+    7<br />
+    8<br />
+    9<br />
+    0<br />
+    1<br />
+    2<br />
+    3<br />
+    4<br />
+    5<br />
+    6<br />
+    7<br />
+    8<br />
+    9<br />
+    0<br />
+    1<br />
+    2<br />
+    3<br />
+    4<br />
+    5<br />
+    6<br />
+    7<br />
+    8<br />
+    9<br />*@

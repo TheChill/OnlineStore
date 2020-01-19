@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Online Store</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+    <script src="~/Scripts/modernizr-2.8.3.js"></script>
+    <script src="~/Scripts/CustomScripts.js"></script>
+
+</head>
+<body>
+    <div class="main-header">
+        <div class="main-navbar" id="main-navbar">
+            <ul class="buttons">
+                <li style="width:33%">@Html.ActionLink("Home", "Index", "Home")</li>
+                <li style="width:34%">@Html.ActionLink("About", "About", "Home")</li>
+                <li style="width:33%">@Html.ActionLink("Contact", "Contact", "Home")</li>
+            </ul>
+        </div>
+        <div class="main-sticky-navbar" id="main-sticky-navbar">
+            <ul class="buttons">
+                <li class="nav-button">@Html.ActionLink("Babys", "Test", "Home")</li>
+                <li class="nav-button">@Html.ActionLink("Men", "About", "Home")</li>
+                <li class="nav-button">@Html.ActionLink("Women", "About", "Home")</li>
+                <li class="nav-button">@Html.ActionLink("Unsure", "About", "Home")</li>
+                <li class="search-field">
+                @Html.TextBox("SearchBox", "Search", new 
+                    {
+                        @class="main-search-box",
+                        @id="main-search-box", 
+                        @onfocus="if (this.value == 'Search') this.value = ''",
+                        @onblur="if (this.value == '') this.value = 'Search'"
+                    })
+                </li>
+            </ul>
+        </div>
+        <div class="main-dropdown-navbar" id="main-dropdown-navbar">
+            <input type="button" class="dropdown-menu-button" id="dropdown-menu-button"/>
+            <div class="expanded-navbar" id="expanded-navbar">
+                <ul class="buttons">
+                    <li class="dropdown-search-field">
+                        @Html.TextBox("SearchBox", "Search", new
+                    {
+                        @class = "dropdown-search-box",
+                        @id = "dropdown-search-box",
+                        @onfocus = "if (this.value == 'Search') this.value = ''",
+                        @onblur = "if (this.value == '') this.value = 'Search'"
+                    })
+                    </li>
+                    <li class="dropdown-nav-button">@Html.ActionLink("Babys", "Test", "Home")</li>
+                    <li class="dropdown-nav-button">@Html.ActionLink("Men", "About", "Home")</li>
+                    <li class="dropdown-nav-button">@Html.ActionLink("Women", "About", "Home")</li>
+                    <li class="dropdown-nav-button">@Html.ActionLink("Unsure", "About", "Home")</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-content body-content" id="body-content">
+        @RenderBody()
+    </div>
+
+    <footer>
+        <div class="main-footer" id="main-footer" align="center">
+            <table class="footer-links">
+                <tr>
+                    <td style="width: 25%">@Html.ActionLink("Home", "Index", "Home")</td>
+                    <td style="width: 25%">@Html.ActionLink("Contacts", "Index", "Home")</td>
+                    <td style="width: 25%">@Html.ActionLink("Shops", "Index", "Home")</td>
+                    <td style="width: 25%">@Html.ActionLink("Unicorns for Sale", "Index", "Home")</td>
+                </tr>
+                <tr>
+                    <td colspan="4">@Html.ActionLink("088-we'd-sell-you-a-unicorn-if-we-had-one-1354", "Index", "Home")</td>
+                </tr>
+            </table>
+        </div>
+    </footer>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
