@@ -7332,11 +7332,16 @@ body {
 }
 
 .main-product-panel .image-panel {
+    border: solid black 1px;
     width: 100%;
 }
 
 .main-product-panel .image-panel .main-image {
     width: 100%;
+}
+
+.main-product-panel .image-panel .main-image:hover {
+    cursor: pointer;
 }
 
 .main-product-panel .product-info-panel {

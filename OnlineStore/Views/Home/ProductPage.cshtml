@@ -5,7 +5,23 @@
 
 <div class="main-product-panel">
     <div class="image-panel">
-        <img src="~/Images/14663.jpg" alt="14663.jpg" class="main-image" />
+        <div>
+            <img src="~/Images/14663.jpg" alt="14663.jpg" class="main-image" />
+        </div>
+        <div style="display:flex; flex-direction: row; flex-wrap: wrap; border-top: solid #555 2px;">
+            <div style="max-width: 20%;">
+                <img src="~/Images/14663.jpg" alt="14663.jpg" style="width:100%;" onclick="ChangeMainProductImage(this);" />
+            </div>
+            <div style="max-width: 20%;">
+                <img src="~/Images/14664.jpg" alt="14664.jpg" style="width:100%;" onclick="ChangeMainProductImage(this);" />
+            </div>
+            <div style="max-width: 20%;">
+                <img src="~/Images/14665.jpg" alt="14665.jpg" style="width:100%;" onclick="ChangeMainProductImage(this);" />
+            </div>
+            <div style="max-width: 20%;">
+                <img src="~/Images/14666.jpg" alt="14666.jpg" style="width:100%;" onclick="ChangeMainProductImage(this);" />
+            </div>
+        </div>
     </div>
     <div class="product-info-panel">
         <h2>Product Name Placeholder Product Name Placeholder</h2>
@@ -27,7 +43,7 @@
                     <option>черен</option>
                     <option>бял</option>
                     <option>бежов</option>
-                </select> <br />
+                </select>
 
                 <label class="category-label">размер:</label>
                 <select class="dropdown-select">
@@ -36,7 +52,7 @@
                     <option>39 (25см)</option>
                     <option>40 (25,5см)</option>
                     <option>41 (26см)</option>
-                </select> <br />
+                </select>
 
                 <div class="quantity-panel">
                     <label class="category-label">количество:</label>
